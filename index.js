@@ -1,5 +1,5 @@
 function loadData(url, callback){
-	$.getJSON(url, callback);
+	$.getJSON(url, callback).fail(showErr);
 }
 
 function renderResults(result){
@@ -17,6 +17,17 @@ function displayData(data){
 	console.log(data);
 	const results = data.items.map((item, index) => renderResults(item));
 	$('.results').html(results);
+}
+
+function showErr(err) {
+  const outputElem = $('.results');
+  
+  const errMsg = (
+    `<p>We couldn't find a video with that title!`
+  );
+    
+  outputElem
+    .html(errMsg);
 }
 
 function getUrl(){

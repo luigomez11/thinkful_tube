@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="Search for videos found on youtube.com">
 	<title>Thinkful Tube</title>
 	<script
           src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -11,15 +12,14 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-	<main>
+	<main role="main">
 		<h1>Thinkful Tube</h1>
 		<form action="#" class="searchForm">
-			<label for="query"></label>
-			<input type="text" class="query" name="Search" placeholder="video title...">
+			<input type="text" id="query" name="Search" aria-label="Search" placeholder="video title..."></label>
 			<button type="submit">Search</button>
 		</form>
 		<h2>Results</h2>
-		<div class="results"></div>
+		<section role="feed" class="results" aria-live="assertive"></section>
 	</main>
 
 </body>
