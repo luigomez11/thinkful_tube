@@ -1,0 +1,8 @@
+* {
+	box-sizing: border-box;
+}
+
+.results img {
+	width: 400px;
+	height: 400px;
+}
